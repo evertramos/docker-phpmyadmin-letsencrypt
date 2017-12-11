@@ -6,8 +6,10 @@ services:
       container_name: phpmyadmin
       external_links:
         - db
-      environment:
-        VIRTUAL_HOST: phpmyadmin.budhi.com.br
+      ports:
+        - "8080:8080"
+#      environment:
+#        VIRTUAL_HOST: phpmyadmin.yourdomain.com
 
 networks:
     default:
