@@ -5,10 +5,11 @@ services:
       image: phpmyadmin/phpmyadmin
       container_name: phpmyadmin
       external_links:
-        - db
+        - db-container-name:db-name
       ports:
         - "8080:8080"
-#      environment:
+      environment:
+        PMA_HOST: db-container-name      
 #        VIRTUAL_HOST: phpmyadmin.yourdomain.com
 
 networks:
